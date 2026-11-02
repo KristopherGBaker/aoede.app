@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <div class="footer-brand">Aoede</div>
+  <nav class="footer-links">
+    <a href="{{ site.baseURL }}privacy/"{% if page.path == "privacy/" %} aria-current="page"{% endif %}>{{ data.site.footer_privacy|escape }}</a>
+    <a href="mailto:{{ data.site.contact }}">{{ data.site.footer_contact|escape }}</a>
+    <a href="https://krisbaker.com/" rel="noopener">Kristopher Baker</a>
+  </nav>
+</footer>

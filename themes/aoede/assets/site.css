@@ -1,0 +1,87 @@
+/* Aoede's Paper reading theme, and Night in dark mode: the values are AoedeDesignSystem/Theme.swift's. */
+@font-face { font-family: "Fraunces"; src: url("fonts/Fraunces-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/Literata-Variable.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/Literata-Italic-Variable.woff2") format("woff2"); font-weight: 200 900; font-style: italic; font-display: swap; }
+
+:root {
+  color-scheme: light dark;
+  --background: #F3EDE1;
+  --surface: #FBF7EF;
+  --ink: #2B2620;
+  --ink-secondary: #6F6557;
+  --accent: #B5502A;
+  --highlight-fill: #F4D7A6;
+  --highlight-ink: #2B2620;
+  --sentence-band: rgba(181, 80, 42, 0.08);
+  --hairline: rgba(43, 38, 32, 0.14);
+  --display: "Fraunces", Georgia, serif;
+  --body: "Literata", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #15120D;
+    --surface: #1E1A13;
+    --ink: #E9E1D2;
+    --ink-secondary: #9C917E;
+    --accent: #E0A45C;
+    --highlight-fill: #4A3A22;
+    --highlight-ink: #F7E8CE;
+    --sentence-band: rgba(224, 164, 92, 0.12);
+    --hairline: rgba(233, 225, 210, 0.14);
+  }
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body { margin: 0; background: var(--background); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; }
+
+.page { min-height: 100vh; display: flex; flex-direction: column; max-width: 1120px; margin: 0 auto; padding: 0 64px; }
+main { flex: 1; }
+
+.site-header { display: flex; align-items: baseline; justify-content: space-between; padding: 32px 0; }
+.wordmark { font-family: var(--display); font-size: 26px; font-weight: 600; letter-spacing: -0.3px; text-decoration: none;
+  font-variation-settings: "opsz" 72, "SOFT" 50; }
+.site-nav a, .footer-links a { font-size: 16px; color: var(--ink-secondary); text-decoration: none; }
+.site-nav a:hover, .footer-links a:hover, .site-nav a[aria-current], .footer-links a[aria-current] { color: var(--ink); }
+
+.hero { padding: 120px 0 144px; max-width: 760px; }
+.hero--article { padding: 72px 0 40px; }
+.kicker { margin: 0 0 24px; font-family: var(--body); font-size: 14px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase;
+  color: var(--accent); }
+.title { margin: 0; font-family: var(--display); font-size: 96px; font-weight: 500; line-height: 1.02; letter-spacing: -2.4px;
+  font-variation-settings: "opsz" 144, "SOFT" 30; }
+.title--article { font-size: 56px; letter-spacing: -1.2px; }
+.band { background: var(--sentence-band); border-radius: 10px; padding: 0 12px; margin: 0 -12px;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.word { background: var(--highlight-fill); color: var(--highlight-ink); border-radius: 8px; padding: 0 8px; margin: 0 -4px; }
+.lead { margin: 36px 0 0; max-width: 34em; font-size: 22px; line-height: 1.55; color: var(--ink-secondary); }
+.hero--article .lead { margin-top: 20px; font-size: 20px; }
+
+.rule { border: 0; height: 1px; background: var(--hairline); margin: 0; }
+.prose { max-width: 680px; padding: 40px 0 112px; }
+.prose h2 { margin: 48px 0 12px; font-family: var(--display); font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -0.3px; }
+.prose p, .prose ul { margin: 0 0 18px; }
+.prose ul { padding-left: 1.2em; }
+.prose li { margin-bottom: 10px; }
+.prose a { color: var(--accent); text-underline-offset: 3px; }
+.prose strong { font-weight: 600; }
+
+.site-footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 28px 0 40px;
+  border-top: 1px solid var(--hairline); }
+.footer-brand { font-family: var(--display); font-size: 18px; font-weight: 600; }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .page { padding: 0 20px; }
+  .site-header { padding: 20px 0; }
+  .hero { padding: 64px 0 88px; }
+  .hero--article { padding: 40px 0 28px; }
+  .title { font-size: 56px; letter-spacing: -1.2px; }
+  .title--article { font-size: 38px; letter-spacing: -0.6px; }
+  .lead { font-size: 19px; margin-top: 28px; }
+  .prose { padding: 28px 0 72px; }
+  .site-footer { flex-direction: column; }
+  .footer-links { gap: 20px; }
+}

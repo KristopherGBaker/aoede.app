@@ -1,0 +1,11 @@
+{
+  "title": "Aoede",
+  "description": "A reader for Mac, iPhone and iPad that reads your books aloud, with the words lighting up as they are spoken.",
+  "baseURL": "https://aoede.app/",
+  "theme": "aoede",
+  "outputDir": "public",
+  "home": {
+    "template": "holding"
+  },
+  "collections": []
+}

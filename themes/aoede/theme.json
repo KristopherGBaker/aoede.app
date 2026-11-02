@@ -1,0 +1,14 @@
+{
+  "compatibleCore" : ">=0.3.0",
+  "head" : {
+    "replaceDefault" : true,
+    "scripts" : [
+
+    ],
+    "stylesheets" : [
+      "assets/site.css"
+    ]
+  },
+  "name" : "aoede",
+  "version" : "1.0.0"
+}

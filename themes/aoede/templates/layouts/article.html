@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero hero--article">
+  <p class="kicker">Aoede</p>
+  <h1 class="title title--article">{{ page.title }}</h1>
+  <p class="lead">{{ page.description }}</p>
+</section>
+<hr class="rule">
+<article class="prose">
+  {{ page.content }}
+</article>
+{% endblock %}

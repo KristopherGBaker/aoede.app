@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block main %}
+<!-- The home page until launch. The last word of the title carries the reader's karaoke highlight. -->
+<section class="hero">
+  <p class="kicker">{{ data.holding.kicker|escape }}</p>
+  <h1 class="title"><span class="band">{{ data.holding.title_before|escape }}<span class="word">{{ data.holding.title_word|escape }}</span></span></h1>
+  <p class="lead">{{ data.holding.lead|escape }}</p>
+</section>
+{% endblock %}

@@ -1,0 +1,6 @@
+<header class="site-header">
+  <a class="wordmark" href="{{ site.baseURL }}"{% if page.path == "" %} aria-current="page"{% endif %}>Aoede</a>
+  <nav class="site-nav">
+    <a href="{{ site.baseURL }}privacy/"{% if page.path == "privacy/" %} aria-current="page"{% endif %}>{{ data.site.nav_privacy|escape }}</a>
+  </nav>
+</header>
